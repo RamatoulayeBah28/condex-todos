@@ -2,23 +2,18 @@
 
 import { useState } from "react";
 import { NewToDoForm } from "./_components/new-todo-form";
+import { useQuery } from "convex/react";
+import { api } from "../../convex/_generated/api";
 
-type ToDoItem = {
-  title: string;
-  description: string;
-  completed: boolean;
-}
 
 export default function Home() {
-  const [todos, setTodos] = useState<ToDoItem[]>([
-    { title: "Example", description: "This is an example", completed: false }
-  ]);
+  const todos = useQuery(api.functions.listTodos);
 
   return (
     <div className="max-w-screen-md mx-auto p-4 space-y-4">
       <h1 className="text-xl front-bold">To-Do List</h1>
       <ul className="space-y-2">
-        {todos.map(({ title, description, completed }, index) => (
+        {todos?.map(({ title, description, completed }, index) => (
           <ToDoItem 
           key={index}
           title={title} 
@@ -40,13 +35,7 @@ export default function Home() {
           />
           ))} 
       </ul>
-        <NewToDoForm onCreate={(title, description) => {
-          setTodos(prev => {
-            const newTodos = [...prev];
-            newTodos.push({ title, description, completed: false});
-            return newTodos;
-          });        
-        }} />
+        <NewToDoForm />
     </div>
   );
 }
