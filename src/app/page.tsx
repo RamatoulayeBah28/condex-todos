@@ -42,7 +42,7 @@ export default function Home() {
             <div className="text-center py-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Get Organized with Your Personal To-Do List</h2>
               <p className="text-gray-600 mb-6">Sign in to start managing your tasks efficiently.</p>
-              <SignInButton mode="modal">
+              <SignInButton>
                 <Button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-2 px-4 rounded-full hover:from-blue-600 hover:to-purple-600 transition duration-300">
                   Sign In to Get Started
                 </Button>
