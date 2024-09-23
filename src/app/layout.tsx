@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 import { Providers } from "./providers";
 
@@ -9,16 +10,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
+      <head>
+        <title>Next.js</title>
+      </head>
       <body>
-        <Providers>
-          {children}
-        </Providers>
-        
+        {children}
+        <Analytics />
       </body>
     </html>
   );
