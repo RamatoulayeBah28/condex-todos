@@ -1,3 +1,5 @@
+"use client";
+
 import { useAction } from "convex/react";
 import { useState } from "react";
 import { api } from "../../../convex/_generated/api";
@@ -29,7 +31,7 @@ export function GenerateTodosForm() {
     return (
         <form onSubmit={handleSubmit}> 
             <div className="flex flex-col gap-2">
-                <h2 className="font-semibold text-lg">Generate Tasks with AI 🪄</h2>
+                <h2 className="text-sm">Create any To-Dos using our AI feature by prompting it with your specific tasks or ideas, and let it generate a personalized list for you.</h2>
                 <label className="text-sm font-semibold" htmlFor="prompt">Prompt</label>
                 <input 
                 className="p-1 border rounded"
