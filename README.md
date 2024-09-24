@@ -1,6 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Task Manager Web App
+
+This is a simple yet efficient to-do list web app built using Convex, Next.js, Tailwind CSS, Clerk for authentication, OpenRouter, and TypeScript. The app allows users to manage their tasks with features like user authentication and a touch of AI to enhance the task management experience.
+
+### Features
+
+Convex Database: We handle data storage and retrieval using Convex, with database queries and mutations to add, update, and delete tasks.
+
+Next.js: The app is built with Next.js for a robust and scalable front-end framework.
+
+Tailwind CSS: Styled with Tailwind for rapid, responsive, and minimalistic design.
+
+Clerk Authentication: Secure user authentication with Clerk, enabling personalized task management.
+
+AI Integration: A sprinkle of AI features, powered by OpenRouter, to enhance the user experience (e.g. task suggestions and effective title and description).
+
+TypeScript: Strongly typed codebase using TypeScript for improved developer experience and reliability.
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
 
 First, run the development server:
 
